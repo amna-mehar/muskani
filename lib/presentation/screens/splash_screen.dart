@@ -86,9 +86,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void openLogin() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (_) => LoginScreen(
+        builder: (loginContext) => LoginScreen(
           onLogin: () {
-            Navigator.of(context).pushReplacement(
+            Navigator.of(loginContext).pushReplacement(
               MaterialPageRoute(
                 builder: (_) => ShopShell(controller: ShopController()),
               ),
